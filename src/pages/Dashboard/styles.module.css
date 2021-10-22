@@ -1,3 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+.header{
+    @apply bg-green-300 h-10 w-full flex justify-between;
+}
+
 .container{
-    @apply bg-green-500 w-full h-10 font-bold;
+    @apply text-green-700 font-bold m-auto;
+}
+
+.searchBox{
+    @apply bg-white rounded-lg  border-gray-700 h-7 w-2/5 m-auto text-center;
+}
+.cartStyle{
+    @apply m-auto font-medium;
+    
+}
+
+.itemStyle{
+    @apply bg-indigo-300 w-72 ;
+    height: fit-content;
+
+}
+
+.imageStyle{
+    @apply h-48 w-48 ;
+}
+.descriptionStyle{
+    @apply text-xs text-gray-700;
 }
