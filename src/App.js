@@ -1,14 +1,13 @@
-const App = ()=> {
+import Dashboard from "./pages/Dashboard";
+
+const App = () => {
   return (
     <div className="App">
-    <>
-    <div>
-      <h1>Shopping App</h1>
-    </div>
-    </>
-
+      <>
+        <Dashboard />
+      </>
     </div>
   );
-}
+};
 
 export default App;
