@@ -2,30 +2,15 @@
     margin:0;
     padding:0;
 }
-.header{
-    @apply bg-green-300 h-10 w-full flex justify-between;
-}
-
-.container{
-    @apply text-green-700 font-bold m-auto;
-}
-
-.searchBox{
-    @apply bg-white rounded-lg  border-gray-700 h-7 w-2/5 m-auto text-center;
-}
-.cartStyle{
-    @apply m-auto font-medium;
-    
-}
 
 .itemStyle{
-    @apply bg-indigo-300 w-72 ;
+    @apply w-72 border-2 border-solid border-gray-200 rounded-xl ml-3 mt-3;
     height: fit-content;
 
 }
 
 .imageStyle{
-    @apply h-48 w-48 ;
+    @apply h-48 w-48 rounded-full m-auto p-3;
 }
 .descriptionStyle{
     @apply text-xs text-gray-700;
