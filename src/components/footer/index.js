@@ -3,7 +3,7 @@ import style from "./styles.module.css";
 
 const Footer = () => {
     return (
-        <div>
+        <footer>
 
 <div className={style.footerStyle}>
         <div className={style.footerFirstSection}>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
             
-        </div>
+        </footer>
     )
 }
 
