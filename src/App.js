@@ -1,11 +1,14 @@
-import Dashboard from "./pages/Dashboard";
+//import Dashboard from "./pages/Dashboard";
+import ProductDetailsPage from "./pages/ProductDetailsPage";
 
 const App = () => {
   return (
     <div className="App">
-      <>
-        <Dashboard />
-      </>
+      
+        {/* <Dashboard /> */}
+
+        <ProductDetailsPage/>
+      
     </div>
   );
 };

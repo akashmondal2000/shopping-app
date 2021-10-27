@@ -1,0 +1,28 @@
+.allProduct{
+    @apply flex justify-between;
+}
+.productShowDiv{
+    @apply w-3/6 mt-3;
+    height: fit-content;
+}
+.productImageStyle{
+    @apply ml-24 mt-1 border-4 rounded-md border-gray-400 border-opacity-25 ; 
+
+    height: 560px;
+    width: 400px;
+}
+.ButtonsStyle{
+    @apply flex justify-center;
+    margin-right: 160px;
+    margin-top: 4px;
+}
+.buyButton{
+    @apply bg-yellow-500 h-14 w-60 ;
+}
+.cartButton{
+    @apply bg-indigo-700 h-14 w-60 ;
+}
+.productDetails{
+    @apply w-3/6 bg-gray-400;
+    height: fit-content;
+}

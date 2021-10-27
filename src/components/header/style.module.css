@@ -4,7 +4,7 @@
 }
 
 .header{
-    @apply bg-green-300 h-10 w-full flex justify-between;
+    @apply bg-green-300 h-16 w-full flex justify-between;
 }
 .container{
     @apply text-green-700 font-bold m-auto;
@@ -13,6 +13,11 @@
     @apply bg-white rounded-lg  border-gray-700 h-7 w-2/5 m-auto text-center;
 }
 .cartStyle{
-    @apply m-auto font-medium;
+    @apply m-auto font-normal;
+    font-size: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     
 }

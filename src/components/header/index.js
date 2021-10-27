@@ -1,4 +1,5 @@
 import style from "./style.module.css";
+import { Icon } from '@iconify/react';
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
         
               <h1 className={style.container}>Shopping Store</h1>
               <input className={style.searchBox} type="search" placeholder="Search" />
-              <h1 className={style.cartStyle}>cart</h1>
+              <span className={style.cartStyle}>cart<Icon icon="eva:shopping-cart-outline" color="white" /></span>
           
         </header>
     </div>
