@@ -1,0 +1,43 @@
+*{
+    @apply m-0 p-0;
+}
+.firstProductSection{
+    @apply flex justify-between;
+}
+.CartImage{
+    @apply h-24 w-36 rounded-3xl border-8 border-gray-300 border-opacity-25;
+
+}
+.imageAndPrice{
+    @apply h-96 flex justify-start ml-36 mt-4 bg-gray-100;
+    width: 420px;
+}
+.ProductPrice{
+    @apply ml-4;
+}
+.addButtons{
+    @apply flex justify-start items-center ml-0;
+}
+.ItemCount{
+    @apply mx-4;
+
+}
+.productNamePrice{
+    @apply flex ; 
+}
+.ProductNameTotalSection{
+    @apply mr-4;
+}
+.Totalsection{
+    @apply mt-4 mr-36 h-96 bg-gray-100 ;
+    width: 420px;
+
+}
+.OrderButton{
+    @apply ml-80 mt-6;
+    height: fit-content;
+    width: fit-content;
+}
+.PlaceorderButton{
+    @apply h-10 w-36 bg-red-500 rounded-xl;
+}

@@ -1,5 +1,8 @@
 //import Dashboard from "./pages/Dashboard";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
+
+import Cart from "./pages/Cart";
+
+// import ProductDetailsPage from "./pages/ProductDetailsPage";
 
 const App = () => {
   return (
@@ -7,7 +10,9 @@ const App = () => {
       
         {/* <Dashboard /> */}
 
-        <ProductDetailsPage/>
+        {/* <ProductDetailsPage/> */}
+
+        <Cart/>
       
     </div>
   );
