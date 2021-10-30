@@ -1,21 +1,7 @@
-//import Dashboard from "./pages/Dashboard";
-
-import Cart from "./pages/Cart";
-
-// import ProductDetailsPage from "./pages/ProductDetailsPage";
+import Router from "./router";
 
 const App = () => {
-  return (
-    <div className="App">
-      
-        {/* <Dashboard /> */}
-
-        {/* <ProductDetailsPage/> */}
-
-        <Cart/>
-      
-    </div>
-  );
+  return <Router/>;
 };
 
 export default App;

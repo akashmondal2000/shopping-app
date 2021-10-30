@@ -3,7 +3,7 @@
     padding:0;
 }
 
-.header{
+.main{
     @apply bg-green-300 h-16 w-full flex justify-between;
 }
 .container{
