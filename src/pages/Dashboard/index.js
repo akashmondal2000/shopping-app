@@ -1,32 +1,39 @@
-import style from "./styles.module.css";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import { Link } from "react-router-dom";
+import ProductCard from "../../components/productCard";
+import { useState } from "react";
+
+import axios from "axios";
+import { useEffect } from "react";
 
 const Dashboard = () => {
+  const getProducts = async () => {
+    const responce = await axios.get("https://fakestoreapi.com/products");
+    console.log(responce);
+    setProducts(responce.data);
+  };
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  console.log("products : ", products);
+
   return (
     <div>
-    <Header/>
+      <Header />
+      {products.length > 0
+        ? products.map((item) => (
+            <ProductCard
+            key={item.id}
+              title={item.title}
+              price={item.price}
+              imgUrl={item.image}
+            />
+          ))
+        : null}
 
-
-      <div className={style.itemStyle}>
-      <Link to="/details">
-        <img
-          className={style.imageStyle}
-          src="https://5.imimg.com/data5/SELLER/Default/2021/4/OK/AE/HI/14160492/better-orenge-grafted-plant-500x500.jpg"
-          alt="image not found"
-        />
-        <p className={style.descriptionStyle}>Description</p>
-        <p>$40</p>
-        </Link>
-
-        <Link to="/cart">
-        <button type="button">add</button>{" "}
-        </Link>
-      </div>
-      <Footer/>
-
-     
+      <Footer />
     </div>
   );
 };
