@@ -2,12 +2,12 @@ import React from 'react'
 import style from "./styles.module.css";
 import { Link } from "react-router-dom";
 
+const ProductCard = ({id,title,price,imgUrl}) => {
 
-const ProductCard = ({title,price,imgUrl}) => {
     return (
         <div>
               <div className={style.itemStyle}>
-        <Link to="/details">
+        <Link to={`/details?id=${id}`}>
           <img
             className={style.imageStyle}
             src= {imgUrl}
