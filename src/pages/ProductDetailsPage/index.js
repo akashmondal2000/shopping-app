@@ -40,33 +40,28 @@ const ProductDetailsPage = () => {
             />
 
             <div className={style.ButtonsStyle}>
+          
               <button className={style.buyButton} type="button">
                 Buy
               </button>
+            
+
+              <Link to="/cart">
               <button className={style.cartButton} type="button">
                 Goto cart
               </button>
+              </Link>
             </div>
           </div>
 
           <div className={style.productDetails}>
             <p>{productDetails ? productDetails.title : "NaN"} </p>
-            <p>price is $40 </p> <br />
-            <p>Description</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-              voluptatem non rerum assumenda. Mollitia animi atque ex
-              accusantium voluptatum. Reiciendis nesciunt dignissimos deleniti
-              dolorem. Sint vitae ullam dolorum quam dolore?
-            </p>
+            <p>{productDetails ? `Price: ${productDetails.price}` : "NaN"} </p> <br />
+            <p>{productDetails ? `Category:  ${productDetails.category}` : "NaN"}</p>
             <br />
-            <p>Specification</p>
             <ul>
-              <li>abcg</li>
-              <li>gggjfgjg</li>
-              <li>jghjdhg</li>
-              <li>khgjhsg</li>
-              <li>jkhgjhgghh</li>
+            <li>Description</li>
+            <li> {productDetails ? productDetails.description : "NaN"} </li>
             </ul>
           </div>
         </div>

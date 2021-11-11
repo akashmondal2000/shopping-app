@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import style from "./styles.module.css";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom"; 
 
 const ProductCard = ({id,title,price,imgUrl}) => {
+
+  let itemId = [id];
+  let itemjson = JSON.stringify(itemId);
+
+  // const [store,setStore] =  useState();
+
+  useEffect (()=>{
+    //localStorage.getItem(id);
+    localStorage.setItem("id",itemjson);
+  },[])
+
+  let history = useHistory();
+  const redirect = () =>{
+
+    history.push(`/cart`);
+  }
 
     return (
         <div>
@@ -17,9 +34,8 @@ const ProductCard = ({id,title,price,imgUrl}) => {
           <p>{price}</p>
         </Link>
 
-        <Link to="/cart">
-          <button type="button">add</button>{" "}
-        </Link>
+        
+          <button type="button" onClick ={redirect}>add</button>
       </div>
             
         </div>
