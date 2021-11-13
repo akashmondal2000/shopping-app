@@ -8,7 +8,7 @@ const Cart = ({ id }) => {
   const [store, setStore] = useState();
 
   useEffect(() => {
-    const cartItemIds = JSON.parse(localStorage.getItem("id"));
+    const cartItemIds = JSON.parse(localStorage.getItem("id")||'[]');
     console.log("cartitemId", cartItemIds);
 
     cartItemIds.map((id) => {
@@ -24,8 +24,7 @@ const Cart = ({ id }) => {
   return (
     <div>
       <Header />
-
-
+    
       <div className={cartStyle.firstProductSection}>
         <div className={cartStyle.imageAndPrice}>
           <div>

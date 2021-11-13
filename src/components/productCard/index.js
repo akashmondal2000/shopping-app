@@ -5,20 +5,25 @@ import { useHistory } from "react-router-dom";
 
 const ProductCard = ({id,title,price,imgUrl}) => {
 
-  let itemId = [id];
-  let itemjson = JSON.stringify(itemId);
-
+ 
   // const [store,setStore] =  useState();
-
-  useEffect (()=>{
-    //localStorage.getItem(id);
-    localStorage.setItem("id",itemjson);
-  },[])
 
   let history = useHistory();
   const redirect = () =>{
+    const cartIds = JSON.parse(localStorage.getItem("id"));
 
-    history.push(`/cart`);
+    if(cartIds){
+
+    
+    cartIds.push(id);
+    localStorage.setItem("id",JSON.stringify(cartIds));
+  }else{
+  localStorage.setItem("id",JSON.stringify([id]));
+}
+  
+
+    console.log("Item ids",cartIds);
+   
   }
 
     return (
